@@ -1,0 +1,18 @@
+.header {
+    display: inline-flex;
+    width: 100%;
+    padding: 1% 0;
+    flex-direction: column;
+
+}
+
+.header__logo {
+    width: 10vw;
+    align-self: flex-start;
+    margin: 0;
+}
+
+.header__languages {
+    align-self: flex-end;
+    float: right;
+}

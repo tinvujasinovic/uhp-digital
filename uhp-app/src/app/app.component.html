@@ -1,6 +1,12 @@
 <app-header></app-header>
 <section class="form">
-  
+  <kendo-autocomplete 
+    [data]="data"
+    [filterable]="true"
+    (valueChange)="valueChange($event)"
+    (filterChange)="filterChange($event)"
+    (focus)="focus()">
+  </kendo-autocomplete>
 </section>
 <app-footer></app-footer>
 
