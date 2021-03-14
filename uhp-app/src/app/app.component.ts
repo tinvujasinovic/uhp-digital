@@ -9,25 +9,35 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent implements OnInit {
 
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('hr');
-}
+    let language = localStorage.getItem("lang");
+
+    if (!language)
+      language = "en";
+
+    translate.setDefaultLang(language);
+  }
 
   data: any = new Array<String>();
-    
+
   ngOnInit(): void {
     this.data.push("test")
     this.data.push("test123")
   }
-  
-  valueChange(event:any){
-    
+
+  changeLanguage(language: string) {
+    localStorage.setItem("lang", language);
+    this.translate.setDefaultLang(language);
   }
 
-  filterChange(event:any){
-    
+  valueChange(event: any) {
+
   }
 
-  focus(){
+  filterChange(event: any) {
+
+  }
+
+  focus() {
 
   }
 
