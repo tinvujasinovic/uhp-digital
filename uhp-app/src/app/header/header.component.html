@@ -3,10 +3,10 @@
         <img src="../../assets/images/Icon-Menu-Logo.svg">
     </figure>
     <div class="header__languages">
-        <div class="langauge" (click)="changeLanguage('en')">
+        <div class="language" [ngClass]="{'active': selectedLanguage == 'en'}" (click)="changeLanguage('en')">
             EN
         </div>
-        <div class="language" (click)="changeLanguage('hr')">
+        <div class="language" [ngClass]="{'active': selectedLanguage == 'hr'}" (click)="changeLanguage('hr')">
             HR
         </div>
     </div>

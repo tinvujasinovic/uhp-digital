@@ -1,4 +1,6 @@
 {
     "who's_your":"Who's your",
-    "governor":"Governor"
+    "governor":"Governor",
+    "county":"County",
+    "noData":"No entries found"
 }

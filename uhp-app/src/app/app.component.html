@@ -1,13 +1,28 @@
 <app-header></app-header>
-<section class="form">
-  <kendo-autocomplete 
-    [data]="data"
-    [filterable]="true"
-    (valueChange)="valueChange($event)"
-    (filterChange)="filterChange($event)"
-    (focus)="focus()">
+<!-- <section class="form">
+
+
+  <div class="input-group">
+    <div class="input-group-icon"><img src="../assets/images/Icon-Location.svg"></div>
+    <div class="input-group-area">
+      <kendo-autocomplete  #autoComplete
+      [data]="countyDataSource"
+      [valueField]="'name'"
+      [filterable]="true"
+      (valueChange)="countyValueChange($event)"
+      (filterChange)="countyFilterChange($event)"
+      (focus)=focus()>
+      <ng-template kendoAutoCompleteItemTemplate let-dataItem>
+        {{dataItem | capitalize}}
+    </ng-template>
+    <ng-template kendoDropDownListNoDataTemplate>  
+      <h5><span class="k-icon k-i-warning text-danger"></span><br/><br /> {{'noData' | translate}}</h5>  
+    </ng-template>  
   </kendo-autocomplete>
+
+    </div>
+  </div>
   {{'governor' | translate}}
-</section>
+</section> -->
 <app-footer></app-footer>
 

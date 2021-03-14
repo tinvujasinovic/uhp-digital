@@ -1,18 +1,36 @@
 .header {
-    display: inline-flex;
+    display: inline-grid;
     width: 100%;
     padding: 1% 0;
-    flex-direction: column;
-
+    grid-template-columns: auto auto;
 }
 
 .header__logo {
-    width: 10vw;
-    align-self: flex-start;
+    width: 30%;
+    float: left;
     margin: 0;
 }
 
 .header__languages {
-    align-self: flex-end;
-    float: right;
+    margin-left: auto;
+    display: flex;
+
+    .language {
+        align-self: center;
+        color: red;
+        padding: 10px 35px;
+        margin-right: 20px;
+     
+    }
+    
+    .active{
+        border: whitesmoke solid 2px;
+    }
+
+    :last-child{
+        margin-right: 0;
+    }
 }
+
+
+
