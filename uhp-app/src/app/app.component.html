@@ -91,17 +91,17 @@
   
       <div class="info__row">
         <div class="info__row-label">{{'email' | translate }}</div>
-        <div class="info__row-value">{{entity?.email }}</div>
+        <a href="mailto:{{entity?.email }}" class="info__row-value">{{entity?.email }}</a>
       </div>
   
       <div class="info__row">
         <div class="info__row-label">{{'phone' | translate }}</div>
-        <div class="info__row-value">{{entity?.phone }}</div>
+        <a href="tel:entity?.phone " class="info__row-value">{{entity?.phone }}</a>
       </div>
 
       <div class="info__row">
         <div class="info__row-label">{{'fax' | translate }}</div>
-        <div class="info__row-value">{{entity?.fax | titlecase}}</div>
+        <a href="tel:entity?.fax " class="info__row-value">{{entity?.fax }}</a>
       </div>
     </div>
   </div>
