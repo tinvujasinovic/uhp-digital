@@ -249,14 +249,9 @@
   
     width: 0;
     height: 0;
- 
-    // border: 600px solid transparent;
-    // border-bottom-color: white;
-    // border-left-color: white;
-    // overflow-y: hidden;
 
     @include md {          
-      border: 570px solid transparent;
+      border: 550px solid transparent;
       border-bottom-color: white;
       border-left-color: white;
     }
