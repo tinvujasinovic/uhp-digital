@@ -5,5 +5,14 @@
     "noData":"Zapisi nisu pronađeni",
     "townOrCommunity":"Grad ili zajednica",
     "showDetails":"Prikaži detalje",
-    "detailsFor":"Detalji za"
+    "detailsFor":"Detalji za",
+    "viceGovernor":"Zamijenik",
+    "address":"Adresa",
+    "zipCode":"Poštanski broj",
+    "country":"Zemlja",
+    "web":"Web",
+    "email":"Email",
+    "phone":"Telefon",
+    "fax":"Fax",
+    "croatia":"Hrvatska"
 }

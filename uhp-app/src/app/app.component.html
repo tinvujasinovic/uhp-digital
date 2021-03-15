@@ -1,7 +1,8 @@
 <app-header></app-header>
+<!-- ne radi najbolje -->
+<p class="box"></p>
+
 <section class="form">
-
-
   <div class="form__title">
     <div class="form__title-decoration"></div>
     {{'whos_your' | translate | titlecase}}
@@ -43,7 +44,7 @@
     </div>
 
     <div class="form__image">
-
+      <img src="../assets/images/Illustration-Speaker.svg">
     </div>
   </div>
 
@@ -51,12 +52,59 @@
 <section *ngIf="showDetails">
   <div class="details">
     <div class="details__heading">
-      <div>{{'detailsFor' | translate}} {{entity?.name}}</div>
+      <div>{{'detailsFor' | translate}} {{entity?.name | lowercase | titlecase}}</div>
     </div>
   </div>
  
   <div class="info">
-    test
+    <div class="info__column">
+      <div class="info__row">
+        <div class="info__row-label">{{'governor' | translate }}</div>
+        <div class="info__row-value">{{entity?.governor | titlecase}}</div>
+      </div>
+  
+      <div class="info__row">
+        <div class="info__row-label">{{'viceGovernor' | translate }}</div>
+        <div class="info__row-value">{{entity?.viceGovernor | titlecase}}</div>
+      </div>
+  
+      <div class="info__row">
+        <div class="info__row-label">{{'address' | translate }}</div>
+        <div class="info__row-value">{{entity?.address | titlecase}}</div>
+      </div>
+
+      <div class="info__row">
+        <div class="info__row-label">{{'zipCode' | translate }}</div>
+        <div class="info__row-value">{{entity?.zipCode }}</div>
+      </div>
+        
+      <div class="info__row">
+        <div class="info__row-label">{{'country' | translate }}</div>
+        <div class="info__row-value">{{'croatia' | translate}}</div>
+      </div>
+    </div>
+    <div class="info__column">
+      <div class="info__row">
+        <div class="info__row-label">{{'web' | translate }}</div>
+        <div class="info__row-value">{{entity?.web }}</div>
+      </div>
+  
+      <div class="info__row">
+        <div class="info__row-label">{{'email' | translate }}</div>
+        <div class="info__row-value">{{entity?.email }}</div>
+      </div>
+  
+      <div class="info__row">
+        <div class="info__row-label">{{'phone' | translate }}</div>
+        <div class="info__row-value">{{entity?.phone }}</div>
+      </div>
+
+      <div class="info__row">
+        <div class="info__row-label">{{'fax' | translate }}</div>
+        <div class="info__row-value">{{entity?.fax | titlecase}}</div>
+      </div>
+    </div>
   </div>
+  
 </section>
 <app-footer></app-footer>

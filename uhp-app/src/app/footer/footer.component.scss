@@ -1,8 +1,42 @@
+
+$screen-sm-min: 576px;
+
+$screen-md-min: 768px;
+
+$screen-lg-min: 992px;
+
+$screen-xl-min: 1200px;
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+      @content;
+  }
+}
+
+
 .footer {
-    height: 130px;
+    height: fit;
     background-color: rgb(62, 60, 97);
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     padding: 0 15%;
 
     .footer__item {
@@ -20,11 +54,15 @@
         }
     }
 
-    .footer__item:first-child {
-        text-align: left;
-    }
-
-    .footer__item:last-child { 
-        text-align: right;
-    }
+    @include md {
+        .footer__item:first-child {
+            text-align: left;
+        }
+    
+        .footer__item:last-child { 
+            text-align: right;
+        }
+      }
+      
+  
 }

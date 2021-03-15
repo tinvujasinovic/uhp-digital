@@ -1,4 +1,38 @@
-  .input-group{
+
+  $screen-sm-min: 576px;
+
+  $screen-md-min: 768px;
+
+  $screen-lg-min: 992px;
+
+  $screen-xl-min: 1200px;
+
+
+  @mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+  }
+
+  @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+  }
+
+  @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+  }
+
+  @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+  }
+
+.input-group{
     display: table;
     width:100%;
   }
@@ -10,7 +44,16 @@
   }
   .input-group-icon{
     padding: 5px 10px;
-    width: 15%;
+    width: 25%;    
+    
+    @include sm {
+      width: 20%;
+    }
+
+    @include lg {
+      width: 15%;
+    }
+
 
     & img {
         opacity: 50%;
@@ -32,24 +75,57 @@
     margin: 0 auto;
     margin-bottom: 5%;
     .form__title {
-      padding: 5% 0;
-      font-size: 4em;
       font-weight: 300;
+      padding-top: 5%;
+      font-size: 20px;
 
+      @include md {
+        font-size: 3em;
+      }
+      
+      @include lg {
+        font-size: 4em;
+        margin-bottom: -5%;
+      }
+    
       .form__title-decoration {
-        width: 12%;
+        width: 30%;
+        @include md {
+          width: 12%;
+        }
         border-bottom: rgb(108,99,255) solid 10px;
       }
 
       .form__title-heading {
         color: rgb(108,99,255);
         font-weight: bold;
+        font-size: 35px;
+
+        @include md {
+          font-size: 65px;
+        }
+        
+        @include lg {
+          font-size: 90px;
+        }
+      }
+    }
+
+    .form__image {
+      display: none;
+      
+      @include md {
+        display: block;
       }
     }
 
     .form__grid {
       display: grid;
-      grid-template-columns: 33.3% 33.3% 33.3%;
+      grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+
+      .form__main {
+        margin-top: auto;
+      }
 
       .form__main-label {
         padding: 15px 0;
@@ -69,15 +145,19 @@
         padding: 1% 15%;
         cursor: pointer;
       }
-
     }
+
   }
 
   .details {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     height: 100px;
   
+    
+    @include md {
+      grid-template-columns: 50% 50%;
+    }
 
     .details__heading {
       box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
@@ -91,6 +171,94 @@
   }
 
   .info {
-    margin-top: 5%;
+    margin-top: 3%;
     padding-left: 15%;
+    padding-right: 10%;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    color: rgb(108,99,255);
+
+    .info__row {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      margin-bottom: 5%;
+
+      .info__row-label {
+        font-weight: bold;
+      }
+
+      .info__row-value{
+        width: 75%;
+        border-bottom: rgb(108,99,255) solid 2px;
+        word-break: break-all;
+      }
+    }
   }
+
+  .background-decoration {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    top: -50px;
+    left: 50%;
+    background-image: linear-gradient(to top, rgba(128,134,245,1), rgba(73,79,123,1));
+    z-index: -10000;    
+
+    :before {
+      content: "";
+      display: block;
+    
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+    
+      width: 0;
+      height: 0;
+      border: 4em solid transparent;
+      border-bottom-color: white;
+      border-left-color: white;
+      }
+  }
+
+  .box {
+    position: absolute;
+    height: 135%;
+    display: none;
+
+    @include xl {
+      left: 30%;
+      width: 70%;
+      top: -140px;
+      display: block;
+    }
+
+    z-index: -10000; 
+    background-image: linear-gradient(to top, rgba(128,134,245,1), rgba(73,79,123,1)); 
+  
+    }
+      
+  .box:before {
+    content: "";
+    display: block;
+  
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+  
+    width: 0;
+    height: 0;
+ 
+    // border: 600px solid transparent;
+    // border-bottom-color: white;
+    // border-left-color: white;
+    // overflow-y: hidden;
+
+    @include md {          
+      border: 570px solid transparent;
+      border-bottom-color: white;
+      border-left-color: white;
+    }
+  }
+      

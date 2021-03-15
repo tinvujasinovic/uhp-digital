@@ -1,15 +1,59 @@
+
+$screen-sm-min: 576px;
+
+$screen-md-min: 768px;
+
+$screen-lg-min: 992px;
+
+$screen-xl-min: 1200px;
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+      @content;
+  }
+}
+
 .header {
     display: grid;
     width: 70%;
     margin: 0 auto;
     padding: 1% 0;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+
+    @include xl {
+      color: rgb(240, 239, 255);
+      }
+
+    color: rgb(108,99,255);
 }
 
 .header__logo {
-    width: 25%;
+    width: 45%;
     float: left;
     margin: 0;
+
+    @include md {
+        width: 25%;
+      }
+  
 }
 
 .header__languages {
@@ -18,14 +62,16 @@
 
     .language {
         align-self: center;
-        color: whitesmoke;
         padding: 10px 35px;
         margin-right: 20px;
      
-    }
-    
+    }    
     .active{
-        border: whitesmoke solid 2px;
+        border: rgb(108,99,255) solid 2px;
+
+        @include xl {
+          border: rgb(240, 239, 255) solid 2px;
+          }
     }
 
     :last-child{

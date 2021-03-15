@@ -5,5 +5,14 @@
     "noData":"No entries found",
     "townOrCommunity":"Town or Community",
     "showDetails":"Show details",
-    "detailsFor":"Details for"
+    "detailsFor":"Details for",
+    "viceGovernor":"Vice Governor",
+    "address":"Address",
+    "zipCode":"Zip Code",
+    "country":"Country",
+    "web":"Web",
+    "email":"Email",
+    "phone":"Phone",
+    "fax":"Fax",
+    "croatia":"Croatia"
 }

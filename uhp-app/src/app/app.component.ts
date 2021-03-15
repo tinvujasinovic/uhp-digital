@@ -86,6 +86,9 @@ export class AppComponent {
   }
 
   countyValueChange(event: any) {
+    this.showDetails = false;
+    this.autoCompleteTown.value = "";
+    
     let county = this.counties.find(x => x.name == event);
 
     if (county == null)
@@ -118,6 +121,8 @@ export class AppComponent {
   }
 
   townValueChange(value: any) {
+    this.showDetails = false;
+
     if (!value || value.trim() == "")
       return;
     let entity = this.towns.find(x => x.name == value);
@@ -133,22 +138,21 @@ export class AppComponent {
 
     this.entity = entity;
 
-    this.http.get<Lists>(`${environment.serviceBase}/api/details.php?entityType=1&ID=${county?.ID}&v=1`).subscribe(data => {
-      this.communityTownDataSource.length = 0;
+    this.communityTownDataSource.length = 0;
 
-      let towns = this.towns.filter((s) => s.countyID == county?.ID);
-      let communities = this.communities.filter((s) => s.countyID == county?.ID);
+    let towns = this.towns.filter((s) => s.countyID == county?.ID);
+    let communities = this.communities.filter((s) => s.countyID == county?.ID);
 
-      communities.forEach(element => {
-        this.communityTownDataSource.push(element)
-      });
+    communities.forEach(element => {
+      this.communityTownDataSource.push(element)
+    });
 
-      towns.forEach(element => {
-        this.communityTownDataSource.push(element)
-      });
+    towns.forEach(element => {
+      this.communityTownDataSource.push(element)
+    });
 
-      this.autoCompleteTown.data = this.communityTownDataSource;
-    })
+    this.autoCompleteTown.data = this.communityTownDataSource;
+
   }
 
   townFilterChange(value: any) {
@@ -171,7 +175,12 @@ export class AppComponent {
   }
 
   show(){
-    if(this.entity != null)
+    if(this.entity != null){
       this.showDetails = true;
+
+      this.http.get<Contact>(`${environment.serviceBase}/api/details.php?entityType=${this.entity.entityType}&ID=${this.entity?.ID}&v=1`).subscribe(data => {
+        this.entity = data;
+      })
+    }
   }
 }
