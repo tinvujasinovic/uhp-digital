@@ -1,6 +1,9 @@
 {
-    "who's_your":"Tko je tvoj",
+    "whos_your":"Tko je tvoj",
     "governor":"Upravitelj",
     "county":"Županija",
-    "noData":"Zapisi nisu pronađeni"
+    "noData":"Zapisi nisu pronađeni",
+    "townOrCommunity":"Grad ili zajednica",
+    "showDetails":"Prikaži detalje",
+    "detailsFor":"Detalji za"
 }

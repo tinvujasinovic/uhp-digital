@@ -3,7 +3,11 @@
   }
 
 body {
-    max-width: 70%;
-    margin: 0 auto;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
+.popupClass :nth-child(2n+2) {
+    background-color:rgb(108,99,255,10%);
+    color: rgb(108,99,255);
+  }

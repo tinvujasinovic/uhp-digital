@@ -15,6 +15,7 @@ export class Contact extends BasicInfo {
 
     constructor(id: number,
         name: string,
+        entityType: number, 
         address: string,
         zip_code: number,
         phone: string,
@@ -27,7 +28,7 @@ export class Contact extends BasicInfo {
         vice_minorities: string,
         president_representative_body: string,
     ) {
-        super(id, name);
+        super(id, name, entityType);
         this.address = address;
         this.zip_code = zip_code;
         this.phone = phone;

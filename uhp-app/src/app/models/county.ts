@@ -2,10 +2,10 @@ import { BasicInfo } from "./basicInfo";
 import { Contact } from "./contact";
 
 export class County extends BasicInfo{
-    // contact: Contact
+    contact: Contact;
 
-    constructor(id: number, name: string) {
-        super(id, name);
-        // this.contact = contact;
+    constructor(id: number, name: string, entityType: number, contact: Contact) {
+        super(id, name, entityType);
+        this.contact = contact;
     }
 }

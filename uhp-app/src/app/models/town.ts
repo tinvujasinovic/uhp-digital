@@ -3,12 +3,12 @@ import { Contact } from "./contact";
 import { County } from "./county";
 
 export class Town extends BasicInfo{
-    county: County;
+    countyID: number;
     contact: Contact;
     
-    constructor(id: number, name: string, county: County, contact: Contact) {
-        super(id, name);
+    constructor(id: number, name: string, entityType: number, countyID: number, contact: Contact) {
+        super(id, name,entityType);
         this.contact = contact;
-        this.county = county;
+        this.countyID = countyID;
     }
 }

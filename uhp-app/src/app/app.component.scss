@@ -1,4 +1,4 @@
-.input-group{
+  .input-group{
     display: table;
     width:100%;
   }
@@ -10,7 +10,7 @@
   }
   .input-group-icon{
     padding: 5px 10px;
-    width: 5%;
+    width: 15%;
 
     & img {
         opacity: 50%;
@@ -22,9 +22,75 @@
   .input-group kendo-autocomplete{
     background-color: rgb(240, 239, 255);
     border: 0;
-    display: block;
     width: 100%;
     padding: 8px;
     color: rgb(108,99,255);
-    line-height: 30px;
+  }
+
+  .form {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    .form__title {
+      padding: 5% 0;
+      font-size: 4em;
+      font-weight: 300;
+
+      .form__title-decoration {
+        width: 12%;
+        border-bottom: rgb(108,99,255) solid 10px;
+      }
+
+      .form__title-heading {
+        color: rgb(108,99,255);
+        font-weight: bold;
+      }
+    }
+
+    .form__grid {
+      display: grid;
+      grid-template-columns: 33.3% 33.3% 33.3%;
+
+      .form__main-label {
+        padding: 15px 0;
+      }
+    }
+
+    .form__submit {
+      padding-left: 2em;
+      margin-top: auto;
+      display: flex;
+
+      .form__submit-button {
+        line-height: 46px;
+        align-self: center;
+        background-color: rgb(108,99,255);
+        color: rgb(240, 239, 255);
+        padding: 1% 15%;
+        cursor: pointer;
+      }
+
+    }
+  }
+
+  .details {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100px;
+  
+
+    .details__heading {
+      box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+      background-color: rgb(108,99,255);
+      padding-left: 30%;
+      color: rgb(240, 239, 255);
+      font-size: 24px;
+      display: flex;
+      align-items: center; 
+    }
+  }
+
+  .info {
+    margin-top: 5%;
+    padding-left: 15%;
   }

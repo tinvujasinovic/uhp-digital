@@ -1,0 +1,30 @@
+.footer {
+    height: 130px;
+    background-color: rgb(62, 60, 97);
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    padding: 0 15%;
+
+    .footer__item {
+        text-align:  center;
+        align-self: center;
+        .footer__item-color-text {
+            color: rgb(108, 97, 255);
+        }
+        .footer__item-white-text {
+            color: rgb(233, 232, 237);
+        }
+        a {
+            text-decoration:  none !important;
+            color: inherit;
+        }
+    }
+
+    .footer__item:first-child {
+        text-align: left;
+    }
+
+    .footer__item:last-child { 
+        text-align: right;
+    }
+}

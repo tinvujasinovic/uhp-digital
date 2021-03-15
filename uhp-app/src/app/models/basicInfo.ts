@@ -1,9 +1,11 @@
 export class BasicInfo {
-    id: number;
+    ID: number;
     name: string;
+    entityType: number;
 
-    constructor(id: number, name: string) {
-        this.id = id;
+    constructor(id: number, name: string, entityType: number) {
+        this.ID = id;
         this.name = name;
+        this.entityType = entityType;
     }
 }

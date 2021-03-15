@@ -1,12 +1,13 @@
 .header {
-    display: inline-grid;
-    width: 100%;
+    display: grid;
+    width: 70%;
+    margin: 0 auto;
     padding: 1% 0;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
 }
 
 .header__logo {
-    width: 30%;
+    width: 25%;
     float: left;
     margin: 0;
 }
@@ -17,7 +18,7 @@
 
     .language {
         align-self: center;
-        color: red;
+        color: whitesmoke;
         padding: 10px 35px;
         margin-right: 20px;
      

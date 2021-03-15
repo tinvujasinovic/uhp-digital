@@ -1,6 +1,9 @@
 {
-    "who's_your":"Who's your",
+    "whos_your":"Who's your",
     "governor":"Governor",
     "county":"County",
-    "noData":"No entries found"
+    "noData":"No entries found",
+    "townOrCommunity":"Town or Community",
+    "showDetails":"Show details",
+    "detailsFor":"Details for"
 }
